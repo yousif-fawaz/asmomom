@@ -1,0 +1,6 @@
+import 'package:flutter/material.dart';import 'package:yosif_s_application3/core/app_export.dart';import 'package:yosif_s_application3/widgets/custom_icon_button.dart';class Iphone14152Screen extends StatelessWidget {const Iphone14152Screen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(backgroundColor: appTheme.black900.withOpacity(0.6), body: SizedBox(width: double.maxFinite, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(height: 33.v), CustomImageView(imagePath: ImageConstant.imgLockOnprimarycontainer, height: 48.adaptSize, width: 48.adaptSize), SizedBox(height: 19.v), Text("Timer’s up!", style: CustomTextStyles.displaySmallBold), SizedBox(height: 26.v), CustomIconButton(height: 77.adaptSize, width: 77.adaptSize, padding: EdgeInsets.all(24.h), decoration: IconButtonStyleHelper.outlineBlackTL381, onTap: () {onTapBtnClose(context);}, child: CustomImageView(imagePath: ImageConstant.imgCloseOnprimarycontainer))])))); } 
+/// Navigates to the iphone14EightythreeScreen when the action is triggered.
+onTapBtnClose(BuildContext context) { Navigator.pushNamed(context, AppRoutes.iphone14EightythreeScreen); } 
+ }

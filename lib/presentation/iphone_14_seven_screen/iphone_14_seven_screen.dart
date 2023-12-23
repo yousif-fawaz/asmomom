@@ -1,0 +1,8 @@
+import '../iphone_14_seven_screen/widgets/thirteengrid_item_widget.dart';import 'package:flutter/material.dart';import 'package:yosif_s_application3/core/app_export.dart';import 'package:yosif_s_application3/widgets/app_bar/appbar_leading_iconbutton.dart';import 'package:yosif_s_application3/widgets/app_bar/appbar_subtitle_two.dart';import 'package:yosif_s_application3/widgets/app_bar/custom_app_bar.dart';class Iphone14SevenScreen extends StatelessWidget {const Iphone14SevenScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(backgroundColor: theme.colorScheme.onPrimary, appBar: _buildAppBar(context), body: Padding(padding: EdgeInsets.only(left: 29.h, top: 61.v, right: 25.h), child: GridView.builder(shrinkWrap: true, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(mainAxisExtent: 110.v, crossAxisCount: 2, mainAxisSpacing: 23.h, crossAxisSpacing: 23.h), physics: NeverScrollableScrollPhysics(), itemCount: 6, itemBuilder: (context, index) {return ThirteengridItemWidget();})))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(leadingWidth: 63.h, leading: AppbarLeadingIconbutton(imagePath: ImageConstant.imgArrow1, margin: EdgeInsets.only(left: 24.h, top: 8.v, bottom: 8.v), onTap: () {onTapIconButton(context);}), title: AppbarSubtitleTwo(text: "Back-Ups", margin: EdgeInsets.only(left: 12.h))); } 
+/// Navigates to the iphone14ThreeTabContainerScreen when the action is triggered.
+onTapIconButton(BuildContext context) { Navigator.pushNamed(context, AppRoutes.iphone14ThreeTabContainerScreen); } 
+ }

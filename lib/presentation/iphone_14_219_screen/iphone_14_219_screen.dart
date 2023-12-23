@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';import 'package:yosif_s_application3/core/app_export.dart';import 'package:yosif_s_application3/widgets/app_bar/appbar_leading_image.dart';import 'package:yosif_s_application3/widgets/app_bar/appbar_title.dart';import 'package:yosif_s_application3/widgets/app_bar/custom_app_bar.dart';class Iphone14219Screen extends StatelessWidget {const Iphone14219Screen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(backgroundColor: theme.colorScheme.onPrimaryContainer.withOpacity(1), appBar: _buildAppBar(context), body: SizedBox(width: SizeUtils.width, child: SingleChildScrollView(padding: EdgeInsets.only(top: 22.v), child: Column(children: [_buildView(context), SizedBox(height: 578.v), _buildVector(context)]))))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(leadingWidth: 53.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgMegaphone, margin: EdgeInsets.only(left: 29.h, top: 15.v, bottom: 16.v), onTap: () {onTapMegaphone(context);}), title: AppbarTitle(text: "Inbox", margin: EdgeInsets.only(left: 28.h))); } 
+/// Section Widget
+Widget _buildView(BuildContext context) { return GestureDetector(onTap: () {onTapView(context);}, child: Padding(padding: EdgeInsets.symmetric(horizontal: 28.h), child: Row(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [Container(height: 42.adaptSize, width: 42.adaptSize, margin: EdgeInsets.only(bottom: 23.v), decoration: BoxDecoration(color: appTheme.blue5002, borderRadius: BorderRadius.circular(21.h))), Expanded(child: Padding(padding: EdgeInsets.only(left: 20.h), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text("Person", style: CustomTextStyles.titleMediumProductSansGray90005), Padding(padding: EdgeInsets.only(top: 4.v, bottom: 2.v), child: Text("19:28", style: CustomTextStyles.labelLargeProductSansGray90005))]), SizedBox(height: 4.v), Text("Hey there! I’m still stuck in the rubber r...", style: CustomTextStyles.titleSmallGray90005), SizedBox(height: 5.v), Text("You haven’t been responding to me...", style: theme.textTheme.bodyMedium)])))]))); } 
+/// Section Widget
+Widget _buildVector(BuildContext context) { return Container(padding: EdgeInsets.symmetric(horizontal: 152.h, vertical: 22.v), decoration: AppDecoration.outlineBlack9007, child: Divider(color: appTheme.gray90005)); } 
+/// Navigates to the iphone14239Screen when the action is triggered.
+onTapMegaphone(BuildContext context) { Navigator.pushNamed(context, AppRoutes.iphone14239Screen); } 
+/// Navigates to the iphone14243Screen when the action is triggered.
+onTapView(BuildContext context) { Navigator.pushNamed(context, AppRoutes.iphone14243Screen); } 
+ }
